@@ -7,7 +7,7 @@ resource "oci_objectstorage_bucket" "secretsquirrel" {
   name                  = "myreallysecretstore"
   namespace             = data.oci_objectstorage_namespace.example.namespace
   object_events_enabled = false
-  access_type           = "ObjectRead"
+  access_type           = "ObjectReadWithoutList"
   metadata              = { "data" = "Blockofdata" }
   storage_tier          = "Standard"
   freeform_tags = {
